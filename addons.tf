@@ -1,7 +1,7 @@
 module "cce_addon_autoscaler" {
   count         = var.addon_autoscaler_enabled ? 1 : 0
   source        = "iits-consulting/cce-addon/opentelekomcloud"
-  version       = "< 2.0.0" // todo: replace with "~> 1.0" for first major release (1.0.0)
+  version       = "~> 1.0"
   addon_name    = "autoscaler"
   addon_version = var.addon_autoscaler_version
   cluster_id    = opentelekomcloud_cce_cluster_v3.cluster.id

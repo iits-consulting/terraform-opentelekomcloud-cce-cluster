@@ -121,7 +121,7 @@ See [`MIGRATION.md`](MIGRATION.md) for the step-by-step path from the predecesso
 ## Requirements
 
 | Name | Version |
-| ---- | ------- |
+|------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.7 |
 | <a name="requirement_errorcheck"></a> [errorcheck](#requirement\_errorcheck) | 3.0.3 |
 | <a name="requirement_opentelekomcloud"></a> [opentelekomcloud](#requirement\_opentelekomcloud) | >= 1.36.52, < 2.0.0 |
@@ -129,21 +129,21 @@ See [`MIGRATION.md`](MIGRATION.md) for the step-by-step path from the predecesso
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
+|------|---------|
 | <a name="provider_errorcheck"></a> [errorcheck](#provider\_errorcheck) | 3.0.3 |
 | <a name="provider_opentelekomcloud"></a> [opentelekomcloud](#provider\_opentelekomcloud) | >= 1.36.52, < 2.0.0 |
 
 ## Modules
 
 | Name | Source | Version |
-| ---- | ------ | ------- |
-| <a name="module_cce_addon_autoscaler"></a> [cce\_addon\_autoscaler](#module\_cce\_addon\_autoscaler) | iits-consulting/cce-addon/opentelekomcloud | 1.0.0 |
-| <a name="module_cce_addon_metrics_server"></a> [cce\_addon\_metrics\_server](#module\_cce\_addon\_metrics\_server) | iits-consulting/cce-addon/opentelekomcloud | 1.0.0 |
+|------|--------|---------|
+| <a name="module_cce_addon_autoscaler"></a> [cce\_addon\_autoscaler](#module\_cce\_addon\_autoscaler) | iits-consulting/cce-addon/opentelekomcloud | ~> 1.0 |
+| <a name="module_cce_addon_metrics_server"></a> [cce\_addon\_metrics\_server](#module\_cce\_addon\_metrics\_server) | iits-consulting/cce-addon/opentelekomcloud | < 2.0.0 |
 
 ## Resources
 
 | Name | Type |
-| ---- | ---- |
+|------|------|
 | [errorcheck_is_valid.cluster_container_network_type](https://registry.terraform.io/providers/iits-consulting/errorcheck/3.0.3/docs/resources/is_valid) | resource |
 | [opentelekomcloud_cce_cluster_v3.cluster](https://registry.terraform.io/providers/opentelekomcloud/opentelekomcloud/latest/docs/resources/cce_cluster_v3) | resource |
 | [opentelekomcloud_vpc_eip_v1.cce_eip](https://registry.terraform.io/providers/opentelekomcloud/opentelekomcloud/latest/docs/resources/vpc_eip_v1) | resource |
@@ -152,7 +152,7 @@ See [`MIGRATION.md`](MIGRATION.md) for the step-by-step path from the predecesso
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-| ---- | ----------- | ---- | ------- | :------: |
+|------|-------------|------|---------|:--------:|
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Name of the CCE cluster. | `string` | n/a | yes |
 | <a name="input_cluster_subnet_id"></a> [cluster\_subnet\_id](#input\_cluster\_subnet\_id) | The UUID of the subnet for the cluster nodes. | `string` | n/a | yes |
 | <a name="input_cluster_vpc_id"></a> [cluster\_vpc\_id](#input\_cluster\_vpc\_id) | The ID of the VPC for the cluster nodes. | `string` | n/a | yes |
@@ -202,7 +202,7 @@ See [`MIGRATION.md`](MIGRATION.md) for the step-by-step path from the predecesso
 ## Outputs
 
 | Name | Description |
-| ---- | ----------- |
+|------|-------------|
 | <a name="output_cluster"></a> [cluster](#output\_cluster) | Complete configuration of the created CCE cluster. |
 | <a name="output_cluster_credentials"></a> [cluster\_credentials](#output\_cluster\_credentials) | Collection of access credentials for the API server. (Some or all values will be an empty string if cluster\_ignore\_certificate\_clusters\_data or cluster\_ignore\_certificate\_users\_data is true) |
 | <a name="output_cluster_id"></a> [cluster\_id](#output\_cluster\_id) | UUID of the created CCE cluster. |
